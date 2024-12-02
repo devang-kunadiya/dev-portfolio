@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../ai gallery"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ai gallery"
+	}
+}
