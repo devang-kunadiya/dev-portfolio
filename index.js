@@ -26638,43 +26638,43 @@ class EM {
     constructor() {
         he(this, "items", [{
             name: "mouseWheel",
-            files: ["/sounds/mouse-wheel-0.mp3", "/sounds/mouse-wheel-1.mp3", "/sounds/mouse-wheel-2.mp3"],
+            files: ["sounds/mouse-wheel-0.mp3", "sounds/mouse-wheel-1.mp3", "sounds/mouse-wheel-2.mp3"],
             group: "landing",
             volume: .6
         }, {
             name: "bubble",
-            files: ["/sounds/bubble-0.mp3", "/sounds/bubble-1.mp3", "/sounds/bubble-2.mp3"],
+            files: ["sounds/bubble-0.mp3", "sounds/bubble-1.mp3", "sounds/bubble-2.mp3"],
             group: "lab",
             volume: .2
         }, {
             name: "roomAmbience",
-            files: ["/sounds/room-ambience.mp3"],
+            files: ["sounds/room-ambience.mp3"],
             group: "landing",
             volume: .1,
             html5: !0
         }, {
             name: "notification",
-            files: ["/sounds/notification.mp3"],
+            files: ["sounds/notification.mp3"],
             group: "landing",
             volume: .25
         }, {
             name: "longKeyboard",
-            files: ["/sounds/long-keyboard.mp3"],
+            files: ["sounds/long-keyboard.mp3"],
             group: "landing",
             volume: .5
         }, {
             name: "labAmbience",
-            files: ["/sounds/lab-ambience.mp3"],
+            files: ["sounds/lab-ambience.mp3"],
             group: "lab",
             volume: .15
         }, {
             name: "waterSplash",
-            files: ["/sounds/water-splash.mp3"],
+            files: ["sounds/water-splash.mp3"],
             group: "lab",
             volume: .3
         }, {
             name: "hologram",
-            files: ["/sounds/hologram.mp3"],
+            files: ["sounds/hologram.mp3"],
             group: "lab",
             volume: .8
         }, {
@@ -26689,32 +26689,32 @@ class EM {
             volume: .3
         }, {
             name: "waterUp",
-            files: ["/sounds/water-up.mp3"],
+            files: ["sounds/water-up.mp3"],
             group: "general",
             volume: .5
         }, {
             name: "gasp",
-            files: ["/sounds/gasp.mp3"],
+            files: ["sounds/gasp.mp3"],
             group: "general",
             volume: .2
         }, {
             name: "buttonClick",
-            files: ["/sounds/button-click.mp3"],
+            files: ["sounds/button-click.mp3"],
             group: "general",
             volume: 1
         }, {
             name: "chairDown",
-            files: ["/sounds/chair-down.mp3"],
+            files: ["sounds/chair-down.mp3"],
             group: "landing",
             volume: .4
         }, {
             name: "chairImpact",
-            files: ["/sounds/chair-impact.mp3"],
+            files: ["sounds/chair-impact.mp3"],
             group: "landing",
             volume: 1
         }, {
             name: "bird",
-            files: ["/sounds/bird.mp3"],
+            files: ["sounds/bird.mp3"],
             group: "landing",
             volume: .6
         }]);
