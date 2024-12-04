@@ -24196,42 +24196,43 @@ class rM {
     }
 }
 const oM = [{
-        id: 0,
-        name: "Illustrator",
-        description: "My portfolio website, you're probably looking at right now.",
-        image: "devangimages/ai.jpg.jpg",
-        tags: [],
-        twitter: "http://127.0.0.1:5500/software%20Illustrator/Untitled-1.html",
-    }, {
-        id: 1,
-        name: "Photoshop",
-        description: "You don't take a Photograph. You Make It.",
-        image: "devangimages/ps.jpg.jpg",
-        tags: [],
-        twitter: "http://127.0.0.1:5500/software%20Photoshop/Untitled-1.html",
-    }, {
-        id: 2,
-        name: "Coreldraw",
-        description: "My portfolio website, you're probably looking at right now.",
-        image: "devangimages/cdr.jpg.jpg",
-        tags: [],
-        twitter: "http://127.0.0.1:5500/software%20corel/Untitled-1.html",
-    }, {
-        id: 3,
-        name: "Dimension",
-        description: "the best way to predict the product future is to create it.",
-        image: "devangimages/ds.jpg.jpg",
-        tags: [],
-        twitter: "http://127.0.0.1:5500/software%20di/Untitled-1.html",
-    }, {
-        id: 4,
-        name: "Lightroom",
-        description: "The earth is art, the Photographer is only a witness.",
-        image: "devangimages/lr.jpg.jpg",
-        tags: [],
-        twitter: "http://127.0.0.1:5500/software%20light%20room/Untitled-1.html",
-    }],
-    aM = {
+    id: 0,
+    name: "Illustrator",
+    description: "My portfolio website, you're probably looking at right now.",
+    image: "devangimages/ai.jpg.jpg",
+    tags: [],
+    twitter: "http://127.0.0.1:5500/software%20Illustrator/Untitled-1.html",
+}, {
+    id: 1,
+    name: "Photoshop",
+    description: "You don't take a Photograph. You Make It.",
+    image: "devangimages/ps.jpg.jpg",
+    tags: [],
+    twitter: "http://127.0.0.1:5500/software%20Photoshop/Untitled-1.html",
+}, {
+    id: 2,
+    name: "Coreldraw",
+    description: "My portfolio website, you're probably looking at right now.",
+    image: "devangimages/cdr.jpg.jpg",
+    tags: [],
+    twitter: "http://127.0.0.1:5500/software%20corel/Untitled-1.html",
+}, {
+    id: 3,
+    name: "Dimension",
+    description: "the best way to predict the product future is to create it.",
+    image: "devangimages/ds.jpg.jpg",
+    tags: [],
+    twitter: "http://127.0.0.1:5500/software%20di/Untitled-1.html",
+}, {
+    id: 4,
+    name: "Lightroom",
+    description: "The earth is art, the Photographer is only a witness.",
+    image: "devangimages/lr.jpg.jpg",
+    tags: [],
+    twitter: "http://127.0.0.1:5500/software%20light%20room/Untitled-1.html",
+}];
+
+const aM = {
         // html: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">HTML</div>',
         // css: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">CSS</div>',
         // javascript: '<div class="work-item-tag" style="background: #FFB800;">JavaScript</div>',
@@ -24245,61 +24246,93 @@ class lM {
         he(this, "domElements", {
             renderContainer: document.getElementById("work-render-container")
         });
-        this.experience = new ye, this.sounds = this.experience.sounds, this.items = oM, this.tags = aM, this.renderItems()
+        this.experience = new ye;
+        this.sounds = this.experience.sounds;
+        this.items = oM;  // Using oM without redeclaring it
+        this.tags = aM;
+        this.renderItems();
     }
+
     renderItems() {
         this.items.forEach(e => {
             this.domElements.renderContainer.insertAdjacentHTML("beforeend", `
-            <div id="work-item-${e.id}" class="work-item-container column">
-                <img class="work-item-image" src="${e.image}" alt="${e.alt}" height="300" width="334"/>
-                <div class="work-item-content-container">
-                    <h3>${e.name}</h3>
-                    <div class="work-item-tag-container row">
-                        ${this.renderTags(e.tags)}
+                <div id="work-item-${e.id}" class="work-item-container column">
+                    <img class="work-item-image" src="${e.image}" alt="${e.alt}" height="300" width="334"/>
+                    <div class="work-item-content-container">
+                        <h3>${e.name}</h3>
+                        <div class="work-item-tag-container row">
+                            ${this.renderTags(e.tags)}
+                        </div>
                     </div>
-                    
+                    <div class="work-item-button-container row">
+                        ${this.renderButtons(e)}
+                    </div>
+                    ${e.bannerIcons ? this.renderBanner(e) : ""}
                 </div>
-                <div class="work-item-button-container row">
-                    ${this.renderButtons(e)}
-                </div>
-                ${e.bannerIcons?this.renderBanner(e):""}
-            </div>
-            `), this.addEventListenersToCard(e)
-        })
+            `);
+            this.addEventListenersToCard(e);
+        });
     }
-    renderBanner(e) {
+
+    renderTags(e) {
         let t = "";
-        return t = `
-            <div class="work-banner-container row center">
-                ${e.bannerIcons.map(n=>`<img src="${n.src}" alt="${n.alt}" height="64" width="64"/>`)}
-                <span>Website Of<br>The Day</span>
-            </div>
-        `, t
+        for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
+        return t;
     }
-  renderButtons(e) {
-    let buttonHtml = '';
 
-    const createButton = (id, className, text, url) => {
-        return `
-            <div id="${id}" class="${className}" style="width: 100%" ${url ? `onclick="window.open('${url}', '_blank').focus()"`: ''}>
-                ${text ? `<span>${text}</span>` : ''}
-            </div>
-        `;
-    };
+    renderButtons(e) {
+        let buttonHtml = '';
 
-    if (e.github) {
-        buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center gray-hover', e.liveview ? '' : 'Source Code', e.github);
-        if (e.liveview) {
-            buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'Live View', e.liveview);
+        const createButton = (id, className, text, url) => {
+            return `
+                <div id="${id}" class="${className}" style="width: 100%" ${url ? `onclick="window.open('${url}', '_blank').focus()"`: ''}>
+                    ${text ? `<span>${text}</span>` : ''}
+                </div>
+            `;
+        };
+
+        if (e.github) {
+            buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center gray-hover', e.liveview ? '' : 'Source Code', e.github);
+            if (e.liveview) {
+                buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'Live View', e.liveview);
+            }
+        } else if (e.twitter) {
+            buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'View More', e.twitter);
+        } else {
+            buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center', 'Work in progress');
         }
-    } else if (e.twitter) {
-        buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'View More', e.twitter);
-    } else {
-        buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center', 'Work in progress');
+
+        return buttonHtml;
     }
 
-    return buttonHtml;
+    addEventListenersToCard(e) {
+        const t = document.getElementById("work-item-" + e.id);
+        t.addEventListener("click", () => {
+            if (t.classList.contains("work-inactive-item-container") && document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
+                this.experience.ui.work.cards.currentItemIndex = -e.id + 4;
+                this.experience.ui.work.cards.updatePositions();
+                this.sounds.play("buttonClick");
+            }
+        });
+
+        if (e.github) {
+            document.getElementById("work-item-gray-button-" + e.id).addEventListener("click", () => {
+                window.open(e.github, "_blank").focus();
+            });
+
+            if (e.liveview) {
+                document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
+                    window.open(e.liveview, "_blank").focus();
+                });
+            }
+        } else if (e.twitter) {
+            document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
+                window.open(e.twitter, "_blank").focus();
+            });
+        }
+    }
 }
+
 
     renderTags(e) {
         let t = "";
