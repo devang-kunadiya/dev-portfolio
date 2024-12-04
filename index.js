@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 var ap = Object.defineProperty;
 var lp = (o, e, t) => e in o ? ap(o, e, {
     enumerable: !0,
@@ -23846,7 +23857,7 @@ const tM = [{
 }, {
     name: "desktop0",
     type: "texture",
-    path: "/devangimages/0.jpg.png"
+    path: "devangimages/0.jpg.png"
 }, {
     name: "desktop1",
     type: "texture",
@@ -23910,7 +23921,7 @@ const tM = [{
 }, {
     name: "davidImage",
     type: "texture",
-    path: "/devangimages/devang.png",
+    path: "devangimages/devang.png",
 }
 ];
 class nM extends Ai {
@@ -24193,6 +24204,130 @@ class rM {
     }
     updateNavigation() {
         this.currentItemIndex == 0 ? (this.domElements.nextButton.classList.add("work-disabled-navigation-button"), this.experience.ui.hoverIcon.setupDefault()) : this.currentItemIndex == 4 ? (this.domElements.backButton.classList.add("work-disabled-navigation-button"), this.experience.ui.hoverIcon.setupDefault()) : (this.domElements.nextButton.classList.remove("work-disabled-navigation-button"), this.domElements.backButton.classList.remove("work-disabled-navigation-button"))
+    }
+}
+const oM = [{
+        id: 0,
+        name: "Illustrator",
+        description: "My portfolio website, you're probably looking at right now.",
+        image: "devangimages/ai.jpg.jpg",
+        tags: [],
+        twitter: "http://127.0.0.1:5500/software%20Illustrator/Untitled-1.html",
+    }, {
+        id: 1,
+        name: "Photoshop",
+        description: "You don't take a Photograph. You Make It.",
+        image: "devangimages/ps.jpg.jpg",
+        tags: [],
+        twitter: "http://127.0.0.1:5500/software%20Photoshop/Untitled-1.html",
+    }, {
+        id: 2,
+        name: "Coreldraw",
+        description: "My portfolio website, you're probably looking at right now.",
+        image: "devangimages/cdr.jpg.jpg",
+        tags: [],
+        twitter: "http://127.0.0.1:5500/software%20corel/Untitled-1.html",
+    }, {
+        id: 3,
+        name: "Dimension",
+        description: "the best way to predict the product future is to create it.",
+        image: "devangimages/ds.jpg.jpg",
+        tags: [],
+        twitter: "http://127.0.0.1:5500/software%20di/Untitled-1.html",
+    }, {
+        id: 4,
+        name: "Lightroom",
+        description: "The earth is art, the Photographer is only a witness.",
+        image: "devangimages/lr.jpg.jpg",
+        tags: [],
+        twitter: "http://127.0.0.1:5500/software%20light%20room/Untitled-1.html",
+    }],
+    aM = {
+        // html: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">HTML</div>',
+        // css: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">CSS</div>',
+        // javascript: '<div class="work-item-tag" style="background: #FFB800;">JavaScript</div>',
+        // socketio: '<div class="work-item-tag" style="background: #21BAEB;">Socket.IO</div>',
+        // webgl: '<div class="work-item-tag" style="background: #5A69EC;">WebGL</div>',
+        // api: '<div class="work-item-tag" style="background: #CA49F8;">API</div>',
+        // backend: '<div class="work-item-tag" style="background: #8433CC;">Backend</div>'
+    };
+class lM {
+    constructor() {
+        he(this, "domElements", {
+            renderContainer: document.getElementById("work-render-container")
+        });
+        this.experience = new ye, this.sounds = this.experience.sounds, this.items = oM, this.tags = aM, this.renderItems()
+    }
+    renderItems() {
+        this.items.forEach(e => {
+            this.domElements.renderContainer.insertAdjacentHTML("beforeend", `
+            <div id="work-item-${e.id}" class="work-item-container column">
+                <img class="work-item-image" src="${e.image}" alt="${e.alt}" height="300" width="334"/>
+                <div class="work-item-content-container">
+                    <h3>${e.name}</h3>
+                    <div class="work-item-tag-container row">
+                        ${this.renderTags(e.tags)}
+                    </div>
+                    
+                </div>
+                <div class="work-item-button-container row">
+                    ${this.renderButtons(e)}
+                </div>
+                ${e.bannerIcons?this.renderBanner(e):""}
+            </div>
+            `), this.addEventListenersToCard(e)
+        })
+    }
+    renderBanner(e) {
+        let t = "";
+        return t = `
+            <div class="work-banner-container row center">
+                ${e.bannerIcons.map(n=>`<img src="${n.src}" alt="${n.alt}" height="64" width="64"/>`)}
+                <span>Website Of<br>The Day</span>
+            </div>
+        `, t
+    }
+  renderButtons(e) {
+    let buttonHtml = '';
+
+    const createButton = (id, className, text, url) => {
+        return `
+            <div id="${id}" class="${className}" style="width: 100%" ${url ? `onclick="window.open('${url}', '_blank').focus()"`: ''}>
+                ${text ? `<span>${text}</span>` : ''}
+            </div>
+        `;
+    };
+
+    if (e.github) {
+        buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center gray-hover', e.liveview ? '' : 'Source Code', e.github);
+        if (e.liveview) {
+            buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'Live View', e.liveview);
+        }
+    } else if (e.twitter) {
+        buttonHtml += createButton(`work-item-orange-button-${e.id}`, 'work-item-orange-button small-button center orange-hover', 'View More', e.twitter);
+    } else {
+        buttonHtml += createButton(`work-item-gray-button-${e.id}`, 'work-item-gray-button center', 'Work in progress');
+    }
+
+    return buttonHtml;
+}
+
+    renderTags(e) {
+        let t = "";
+        for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
+        return t
+    }
+    addEventListenersToCard(e) {
+        const t = document.getElementById("work-item-" + e.id);
+        t.addEventListener("click", () => {
+            t.classList.contains("work-inactive-item-container") && document.getElementById("work-item-0").classList.contains("work-item-container-transition") && (this.experience.ui.work.cards.currentItemIndex = -e.id + 4, this.experience.ui.work.cards.updatePositions(), this.sounds.play("buttonClick"))
+        }), e.github ? (document.getElementById("work-item-gray-button-" + e.id).addEventListener("click", () => {
+            window.open(e.github, "_blank").focus()
+        }), e.liveview && document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
+            window.open(e.liveview, "_blank").focus()
+        })) : e.twitter && document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
+            window.open(e.twitter, "_blank").focus()
+        })
     }
 }
 const oM = [{
