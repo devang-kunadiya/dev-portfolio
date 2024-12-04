@@ -24119,25 +24119,25 @@ class iM extends Ai {
         })
     }
 }
-class sM {
-    constructor() {
-        he(this, "isShowing", !1);
-        he(this, "duration", .6);
-        he(this, "domElements", {
-            container: document.getElementById("transition-container"),
-            logo: document.getElementById("loadig-animation-container")
-        });
-        this.experience = new ye, this.sounds = this.experience.sounds
-    }
-    show() {
-        this.domElements.container.classList.remove("hide"), this.isShowing = !0, this.domElements.container.classList.remove("hideTopTransition"), this.domElements.container.classList.remove("hideIntroTransition"), this.domElements.container.classList.add("showTransition"), P.delayedCall(.3, () => this.sounds.play("transition0"))
-    }
-    hide() {
-        P.delayedCall(.15, () => {
-            this.domElements.container.classList.remove("showTransition"), this.domElements.container.classList.add("hideTopTransition"), P.delayedCall(this.duration, () => this.isShowing = !1), P.delayedCall(.2, () => this.sounds.play("transition1"))
-        })
-    }
-}
+// class sM {
+//     constructor() {
+//         he(this, "isShowing", !1);
+//         he(this, "duration", .6);
+//         he(this, "domElements", {
+//             container: document.getElementById("transition-container"),
+//             logo: document.getElementById("loadig-animation-container")
+//         });
+//         this.experience = new ye, this.sounds = this.experience.sounds
+//     }
+//     show() {
+//         this.domElements.container.classList.remove("hide"), this.isShowing = !0, this.domElements.container.classList.remove("hideTopTransition"), this.domElements.container.classList.remove("hideIntroTransition"), this.domElements.container.classList.add("showTransition"), P.delayedCall(.3, () => this.sounds.play("transition0"))
+//     }
+//     hide() {
+//         P.delayedCall(.15, () => {
+//             this.domElements.container.classList.remove("showTransition"), this.domElements.container.classList.add("hideTopTransition"), P.delayedCall(this.duration, () => this.isShowing = !1), P.delayedCall(.2, () => this.sounds.play("transition1"))
+//         })
+//     }
+// }
 class rM {
     constructor() {
         he(this, "positionStyles", ["transform: translateX(-410%) scale(0.9);", "transform: translateX(-310%) scale(0.9); ", "transform: translateX(-210%) scale(0.9);", "transform: translateX(-110%) scale(0.9); ", "transform: translateX(0%);", "transform: translateX(110%) scale(0.9);", "transform: translateX(210%) scale(0.9)", "transform: translateX(310%) scale(0.9);", "transform: translateX(410%) scale(0.9);"]);
@@ -24276,7 +24276,9 @@ class lM {
 
     renderTags(e) {
         let t = "";
-        for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
+        for (let n = 0; n < e.length; n++) {
+            t += this.tags[e[n]];
+        }
         return t;
     }
 
@@ -24308,7 +24310,8 @@ class lM {
     addEventListenersToCard(e) {
         const t = document.getElementById("work-item-" + e.id);
         t.addEventListener("click", () => {
-            if (t.classList.contains("work-inactive-item-container") && document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
+            if (t.classList.contains("work-inactive-item-container") && 
+                document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
                 this.experience.ui.work.cards.currentItemIndex = -e.id + 4;
                 this.experience.ui.work.cards.updatePositions();
                 this.sounds.play("buttonClick");
@@ -24331,27 +24334,8 @@ class lM {
             });
         }
     }
-
-
-
-    renderTags(e) {
-        let t = "";
-        for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
-        return t
-    }
-    addEventListenersToCard(e) {
-        const t = document.getElementById("work-item-" + e.id);
-        t.addEventListener("click", () => {
-            t.classList.contains("work-inactive-item-container") && document.getElementById("work-item-0").classList.contains("work-item-container-transition") && (this.experience.ui.work.cards.currentItemIndex = -e.id + 4, this.experience.ui.work.cards.updatePositions(), this.sounds.play("buttonClick"))
-        }), e.github ? (document.getElementById("work-item-gray-button-" + e.id).addEventListener("click", () => {
-            window.open(e.github, "_blank").focus()
-        }), e.liveview && document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
-            window.open(e.liveview, "_blank").focus()
-        })) : e.twitter && document.getElementById("work-item-orange-button-" + e.id).addEventListener("click", () => {
-            window.open(e.twitter, "_blank").focus()
-        })
-    }
 }
+
 const oM = [{
         id: 0,
         name: "Illustrator",
