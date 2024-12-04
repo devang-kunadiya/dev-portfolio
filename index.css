@@ -1,3 +1,4 @@
+
 #transition-container {
     position: absolute;
     z-index: 1000;
@@ -5,57 +6,57 @@
     bottom: -100%;
     transform: rotate(20deg);
     left: -40%;
-    pointer-events: none;
+    pointer-events: none
 }
 
 #transition-wave-svg {
-    transform: translateY(20px);
+    transform: translateY(20px)
 }
 
 #transition-wave-svg-bottom {
-    transform: rotate(180deg) translateY(20px);
+    transform: rotate(180deg) translateY(20px)
 }
 
 .hideTopTransition {
     animation: hideTopTransition ease-in .7s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards
 }
 
 @keyframes hideTopTransition {
     0% {
         bottom: -120%;
-        left: -40%;
+        left: -40%
     }
     to {
         bottom: 100%;
-        left: 40%;
+        left: 40%
     }
 }
 
 .showTransition {
     animation: showTransition ease-in .7s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards
 }
 
 @keyframes showTransition {
     0% {
         bottom: -450%;
-        left: -60%;
+        left: -60%
     }
     to {
         bottom: -120%;
-        left: -40%;
+        left: -40%
     }
 }
 
 #transition-push {
     height: 200vh;
-    background: #FF923E;
+    background: #FF923E
 }
 
 @media (max-aspect-ratio: 12/10) {
     #transition-container {
-        transform: translateY(-20%) scale(1.2) rotate(10deg);
+        transform: translateY(-20%) scale(1.2) rotate(10deg)
     }
 }
 
@@ -68,7 +69,7 @@
     left: 0;
     z-index: 3;
     pointer-events: none;
-    opacity: 0;
+    opacity: 0
 }
 
 #header-container {
@@ -77,7 +78,7 @@
     width: 100%;
     transition: .25s;
     padding-top: 15px;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .overlay-button {
@@ -86,12 +87,12 @@
     height: 48px;
     border-radius: 15px;
     cursor: pointer;
-    pointer-events: auto;
+    pointer-events: auto
 }
 
 #header-logo-svg {
     position: absolute;
-    transform-origin: center center;
+    transform-origin: center center
 }
 
 #logo-dark-background {
@@ -100,12 +101,12 @@
     width: 100%;
     height: 100vh;
     top: 15px;
-    clip-path: url(#logo-clip-path);
+    clip-path: url(#logo-clip-path)
 }
 
 #logo-white-background {
     background: white;
-    width: 200px;
+    width: 200px
 }
 
 #logo-click-container {
@@ -114,26 +115,26 @@
     position: absolute;
     cursor: pointer;
     pointer-events: auto;
-    transform-origin: top left;
+    transform-origin: top left
 }
 
 #sound-button {
-    right: 62px;
+    right: 62px
 }
 
 #header-sound-svg {
     height: 48px;
     width: 48px;
-    transform: translate(12px) scale(1.2);
+    transform: translate(12px) scale(1.2)
 }
 
 #sound-button-scale-container {
     transform-origin: top right;
-    position: relative;
+    position: relative
 }
 
 #menu-button {
-    right: 0;
+    right: 0
 }
 
 .menu-button-bar {
@@ -141,11 +142,11 @@
     height: 4px;
     background: white;
     margin: 2.5px;
-    border-radius: 2px;
+    border-radius: 2px
 }
 
 #menu-button-scale-container {
-    transform-origin: top right;
+    transform-origin: top right
 }
 
 .scroll-container {
@@ -155,7 +156,7 @@
     right: 0;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .scroll-border-container {
@@ -165,7 +166,7 @@
     border-radius: 12px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .scroll-wheel {
@@ -173,12 +174,12 @@
     width: 4px;
     height: 11px;
     border-radius: 2px;
-    margin-top: 4px;
+    margin-top: 4px
 }
 
 .scroll-touch-icon {
     height: 38px;
-    width: 38px;
+    width: 38px
 }
 
 @media (max-width: 800px),
@@ -189,10 +190,10 @@
     .scroll-container,
     #logo-clip-path,
     #logo-click-container {
-        transform: scale(.9);
+        transform: scale(.9)
     }
     #sound-button {
-        right: 64px;
+        right: 64px
     }
 }
 
@@ -204,10 +205,10 @@
     .scroll-container,
     #logo-clip-path,
     #logo-click-container {
-        transform: scale(.8);
+        transform: scale(.8)
     }
     #sound-button {
-        right: 60px;
+        right: 60px
     }
 }
 
@@ -215,7 +216,7 @@
     height: 100%;
     width: 100%;
     top: 0;
-    position: absolute;
+    position: absolute
 }
 
 #landing-page-section {
@@ -224,14 +225,14 @@
     justify-content: flex-start;
     height: calc(100% - 30px);
     left: 0;
-    position: relative;
+    position: relative
 }
 
 #landing-content-svg {
     width: 550px;
     max-width: 45%;
     max-height: 53%;
-    position: relative;
+    position: relative
 }
 
 .landing-headline {
@@ -239,30 +240,30 @@
     font-size: 64px;
     font-weight: 600;
     fill: #091434;
-    letter-spacing: -.5px;
+    letter-spacing: -.5px
 }
 
 .landing-subheading {
     font-size: 17px;
     fill: #7c8594;
-    transform-origin: left;
+    transform-origin: left
 }
 
 @media (max-aspect-ratio: 12/10) {
     #landing-content-svg {
         max-width: 94%;
-        max-height: 80%;
+        max-height: 80%
     }
     #landing-page {
         align-items: flex-start;
         padding-top: 45px;
-        background-image: linear-gradient(180deg, #F5EFE6 45%, transparent 50%);
+        background-image: linear-gradient(180deg, #F5EFE6 45%, transparent 50%)
     }
     #landing-page-section {
         max-height: 40vh;
         justify-content: center;
         align-items: center;
-        position: unset;
+        position: unset
     }
 }
 
@@ -270,18 +271,18 @@
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100%;
+    width: 100%
 }
 
 .scroll-container-transitions {
-    transition: left .9s cubic-bezier(.645, .045, .355, 1), top .7s cubic-bezier(.6, 0, .4, 1);
+    transition: left .9s cubic-bezier(.645, .045, .355, 1), top .7s cubic-bezier(.6, 0, .4, 1)
 }
 
 #hover-icon-color-switch {
     position: absolute;
     width: 300%;
     height: 50%;
-    top: 0;
+    top: 0
 }
 
 #about-section {
@@ -290,29 +291,29 @@
     font-family: Electrolize, sans-serif;
     color: #34bfff;
     min-height: 100vh;
-    padding-bottom: 90px;
+    padding-bottom: 90px
 }
 
 #about-content-container {
     width: 580px;
     max-width: 45%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #about-content-container span {
-    color: #34bfff;
+    color: #34bfff
 }
 
 #skills-svg {
     margin-top: 120px;
-    width: 100%;
+    width: 100%
 }
 
 .about-box-line {
     fill: none;
     stroke: #00b7ff;
-    stroke-width: 2;
+    stroke-width: 2
 }
 
 .about-up-animation-line,
@@ -320,35 +321,35 @@
     fill: none;
     stroke: #00b7ff;
     opacity: 0;
-    stroke-width: 2;
+    stroke-width: 2
 }
 
 .about-box-background {
     stroke-width: 0;
-    fill: url(#about-background-gradient);
+    fill: url(#about-background-gradient)
 }
 
 .about-header {
     font-weight: 700;
     font-size: 18px;
-    fill: #34bfff;
+    fill: #34bfff
 }
 
 .about-text {
     font-weight: 700;
     font-size: 15px;
-    fill: #34bfff;
+    fill: #34bfff
 }
 
 #about-skills-container {
     padding: 10px 0;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 16px
 }
 
 #about-skills-render-container :nth-child(even),
 #about-others-render-container :nth-child(odd) {
-    background: #2d88dd18;
+    background: #2d88dd18
 }
 
 .about-skill-container {
@@ -357,64 +358,55 @@
     padding: 6px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .about-skill-container span {
     width: 250px;
-    background: transparent !important;
+    background: transparent !important
 }
 
 .about-skill-bar-container {
     width: 100%;
     height: 11px;
     background: #00b7ff33 !important;
-    overflow: auto;
+    overflow: auto
 }
 
 .about-skill-bar {
     height: 100%;
     background: linear-gradient(to right, #2d88dd, #34bfff) !important;
-    width: 30%;
+    width: 30%
 }
 
 #about-svg-about image {
     image-rendering: pixelated;
-    opacity: .9;
+    opacity: .9
 }
 
 .about-pixel-mask-rect {
-    fill: #fff;
+    fill: #fff
 }
 
 @media (max-aspect-ratio: 12/10) {
     #about-section {
         justify-content: center;
-        padding-bottom: 3vh;
+        padding-bottom: 3vh
     }
     #about-content-container {
         max-width: 100%;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: flex-start
     }
     #skills-svg {
         margin-top: 63vh;
-        margin-bottom: 90px;
+        margin-bottom: 90px
     }
 }
 
 .landing-slow-transition {
-    transition: top .7s cubic-bezier(.645, .045, .355, 1), left .9s cubic-bezier(.6, 0, .4, 1);
+    transition: top .7s cubic-bezier(.645, .045, .355, 1)
 }
-
-@media (max-width: 1024px),
-(max-height: 1024px) {
-    #scroll-container {
-        display: flex;
-        justify-content: flex-end;
-    }
-}
-
 
 .slide-out-left-transition {
     transition: left .9s cubic-bezier(.6, 0, .4, 1), right .9s cubic-bezier(.6, 0, .4, 1)
@@ -1227,8 +1219,8 @@ section {
     font-family: Electrolize;
     font-style: normal;
     font-weight: 400;
-    src: url(/electrolize-v14-latin-regular.eot);
-    src: local(""), url(/electrolize-v14-latin-regular.eot?#iefix) format("embedded-opentype"), url(/electrolize-v14-latin-regular.woff2) format("woff2"), url(/electrolize-v14-latin-regular.woff) format("woff"), url(/electrolize-v14-latin-regular.ttf) format("truetype"), url(/electrolize-v14-latin-regular.svg#Electrolize) format("svg");
+    src: url(electrolize-v14-latin-regular.eot);
+    src: local(""), url(electrolize-v14-latin-regular.eot?#iefix) format("embedded-opentype"), url(electrolize-v14-latin-regular.woff2) format("woff2"), url(electrolize-v14-latin-regular.woff) format("woff"), url(electrolize-v14-latin-regular.ttf) format("truetype"), url(electrolize-v14-latin-regular.svg#Electrolize) format("svg");
     font-display: swap
 }
 
@@ -1236,8 +1228,8 @@ section {
     font-family: Poppins;
     font-style: normal;
     font-weight: 400;
-    src: url(/poppins-v19-latin-regular.eot);
-    src: local(""), url(/poppins-v19-latin-regular.eot?#iefix) format("embedded-opentype"), url(/poppins-v19-latin-regular.woff2) format("woff2"), url(/poppins-v19-latin-regular.woff) format("woff"), url(/poppins-v19-latin-regular.ttf) format("truetype"), url(/poppins-v19-latin-regular.svg#Poppins) format("svg");
+    src: url(poppins-v19-latin-regular.eot);
+    src: local(""), url(poppins-v19-latin-regular.eot?#iefix) format("embedded-opentype"), url(poppins-v19-latin-regular.woff2) format("woff2"), url(poppins-v19-latin-regular.woff) format("woff"), url(poppins-v19-latin-regular.ttf) format("truetype"), url(poppins-v19-latin-regular.svg#Poppins) format("svg");
     font-display: swap
 }
 
@@ -1245,8 +1237,8 @@ section {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    src: url(/poppins-v19-latin-500.eot);
-    src: local(""), url(/poppins-v19-latin-500.eot?#iefix) format("embedded-opentype"), url(/poppins-v19-latin-500.woff2) format("woff2"), url(/poppins-v19-latin-500.woff) format("woff"), url(/poppins-v19-latin-500.ttf) format("truetype"), url(/poppins-v19-latin-500.svg#Poppins) format("svg");
+    src: url(poppins-v19-latin-500.eot);
+    src: local(""), url(poppins-v19-latin-500.eot?#iefix) format("embedded-opentype"), url(poppins-v19-latin-500.woff2) format("woff2"), url(poppins-v19-latin-500.woff) format("woff"), url(poppins-v19-latin-500.ttf) format("truetype"), url(poppins-v19-latin-500.svg#Poppins) format("svg");
     font-display: swap
 }
 
@@ -1254,8 +1246,8 @@ section {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    src: url(/poppins-v19-latin-600.eot);
-    src: local(""), url(/poppins-v19-latin-600.eot?#iefix) format("embedded-opentype"), url(/poppins-v19-latin-600.woff2) format("woff2"), url(/poppins-v19-latin-600.woff) format("woff"), url(/poppins-v19-latin-600.ttf) format("truetype"), url(/poppins-v19-latin-600.svg#Poppins) format("svg");
+    src: url(poppins-v19-latin-600.eot);
+    src: local(""), url(poppins-v19-latin-600.eot?#iefix) format("embedded-opentype"), url(poppins-v19-latin-600.woff2) format("woff2"), url(poppins-v19-latin-600.woff) format("woff"), url(poppins-v19-latin-600.ttf) format("truetype"), url(poppins-v19-latin-600.svg#Poppins) format("svg");
     font-display: swap
 }
 
@@ -1263,7 +1255,10 @@ section {
     font-family: Poppins;
     font-style: normal;
     font-weight: 700;
-    src: url(/poppins-v19-latin-700.eot);
-    src: local(""), url(/poppins-v19-latin-700.eot?#iefix) format("embedded-opentype"), url(/poppins-v19-latin-700.woff2) format("woff2"), url(/poppins-v19-latin-700.woff) format("woff"), url(/poppins-v19-latin-700.ttf) format("truetype"), url(/poppins-v19-latin-700.svg#Poppins) format("svg");
+    src: url(poppins-v19-latin-700.eot);
+    src: local(""), url(poppins-v19-latin-700.eot?#iefix) format("embedded-opentype"), url(poppins-v19-latin-700.woff2) format("woff2"), url(poppins-v19-latin-700.woff) format("woff"), url(poppins-v19-latin-700.ttf) format("truetype"), url(poppins-v19-latin-700.svg#Poppins) format("svg");
     font-display: swap
 }
+
+
+
