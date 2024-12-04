@@ -24119,25 +24119,25 @@ class iM extends Ai {
         })
     }
 }
-// class sM {
-//     constructor() {
-//         he(this, "isShowing", !1);
-//         he(this, "duration", .6);
-//         he(this, "domElements", {
-//             container: document.getElementById("transition-container"),
-//             logo: document.getElementById("loadig-animation-container")
-//         });
-//         this.experience = new ye, this.sounds = this.experience.sounds
-//     }
-//     show() {
-//         this.domElements.container.classList.remove("hide"), this.isShowing = !0, this.domElements.container.classList.remove("hideTopTransition"), this.domElements.container.classList.remove("hideIntroTransition"), this.domElements.container.classList.add("showTransition"), P.delayedCall(.3, () => this.sounds.play("transition0"))
-//     }
-//     hide() {
-//         P.delayedCall(.15, () => {
-//             this.domElements.container.classList.remove("showTransition"), this.domElements.container.classList.add("hideTopTransition"), P.delayedCall(this.duration, () => this.isShowing = !1), P.delayedCall(.2, () => this.sounds.play("transition1"))
-//         })
-//     }
-// }
+class sM {
+    constructor() {
+        he(this, "isShowing", !1);
+        he(this, "duration", .6);
+        he(this, "domElements", {
+            container: document.getElementById("transition-container"),
+            logo: document.getElementById("loadig-animation-container")
+        });
+        this.experience = new ye, this.sounds = this.experience.sounds
+    }
+    show() {
+        this.domElements.container.classList.remove("hide"), this.isShowing = !0, this.domElements.container.classList.remove("hideTopTransition"), this.domElements.container.classList.remove("hideIntroTransition"), this.domElements.container.classList.add("showTransition"), P.delayedCall(.3, () => this.sounds.play("transition0"))
+    }
+    hide() {
+        P.delayedCall(.15, () => {
+            this.domElements.container.classList.remove("showTransition"), this.domElements.container.classList.add("hideTopTransition"), P.delayedCall(this.duration, () => this.isShowing = !1), P.delayedCall(.2, () => this.sounds.play("transition1"))
+        })
+    }
+}
 class rM {
     constructor() {
         he(this, "positionStyles", ["transform: translateX(-410%) scale(0.9);", "transform: translateX(-310%) scale(0.9); ", "transform: translateX(-210%) scale(0.9);", "transform: translateX(-110%) scale(0.9); ", "transform: translateX(0%);", "transform: translateX(110%) scale(0.9);", "transform: translateX(210%) scale(0.9)", "transform: translateX(310%) scale(0.9);", "transform: translateX(410%) scale(0.9);"]);
