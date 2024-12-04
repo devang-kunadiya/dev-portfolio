@@ -12,10 +12,10 @@
     <meta name="keywords" content="webgl, threejs, portfolio, reactjs, react, frontend developer, front-end, programming, web developer, web, developer, 3d website, 3d, blender, germany">
 
     <!-- Favicon and Icons -->
-    <link rel="icon" type="image/png" href="assets/head/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/head/favicon-16x16.png" sizes="16x16">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/head/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/head/apple-180.png">
+    <link rel="icon" type="image/png" href="head/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="head/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" type="image/x-icon" href="head/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="head/apple-180.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
@@ -25,50 +25,6 @@
 </head>
 
 <body>
-    <!--Canvas-->
-    <canvas id="main-canvas"></canvas>
-
-    <!--Intro-->
-    <div id="intro-container" class="center column">
-        <svg id="intro-svg" viewBox="0 0 56 61" xmlns="http://www.w3.org/2000/svg" height="120" width="120">
-            <mask id="intro-mask">
-                <rect fill="black" height="61" width="61"></rect>
-                <rect fill="white" height="61" width="61" id="loading-rect"></rect>
-            </mask>
-            <use href="#logo-path" fill="#091434" opacity=".1"></use>
-            <use href="#logo-path" fill="#091434" mask="url(#intro-mask)"></use>
-        </svg>
-    </div>
-
-    <!--Loading Container-->
-    <div id="transition-container" class="hide">
-        <svg id="transition-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <defs>
-                <path fill="#FF923E" id="transition-wave-path"
-                    d="M0,128L21.8,138.7C43.6,149,87,171,131,154.7C174.5,139,218,85,262,69.3C305.5,53,349,75,393,101.3C436.4,128,480,160,524,186.7C567.3,213,611,235,655,213.3C698.2,192,742,128,785,122.7C829.1,117,873,171,916,186.7C960,203,1004,181,1047,160C1090.9,139,1135,117,1178,96C1221.8,75,1265,53,1309,53.3C1352.7,53,1396,75,1418,85.3L1440,96L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z">
-                </path>
-            </defs>
-            <use href="#transition-wave-path"></use>
-        </svg>
-    </div>
-
-    <!--Overlay Container-->
-    <div id="overlay-container" class="content-width">
-        <header id="header-container">
-            <!--Logo-->
-            <svg id="header-logo-svg" viewBox="0 0 56 61" xmlns="http://www.w3.org/2000/svg" height="60" width="56">
-                <defs>
-                    <path id="logo-path"
-                        d="M3 14 24 2C28 0 28 0 32 2L53 14C56 16 56 17 56 19L56 43C56 46 55 47 51 49L32 59C28 61 28 61 24 59L5 49C1 47 0 46 0 43L0 19C0 17 0 16 3 14M28 4 5 17 28 28 51 17 28 4M53 20 30 31 30 56 53 44 53 20M40 42 33 35C33 35 32 34 33 33 34 32 35 33 36 34L36 34 43 41C44 42 44 42 43 43L35 51C35 51 34 52 33 51 32 50 33 49 33 49L40 42M16 42 23 35C23 35 24 34 23 33 22 32 21 33 20 34L13 41C12 42 12 42 13 43L21 51C21 51 22 52 23 51 24 50 23 49 23 49L16 42">
-                    </path>
-                </defs>
-            </svg>
-        </header>
-    </div>
-
-   
-
-
     <!--Canvas-->
     <canvas id="main-canvas"></canvas>
 
@@ -596,10 +552,7 @@
         </footer>
 
     </div>
- <script>
-        // Initialize the canvas and animations if needed
-        console.log('Website Loaded!');
-    </script>
+ 
 </body>
 
 </html>
