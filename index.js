@@ -24335,7 +24335,7 @@ class lM {
         }
     }
 }
-
+// Declare oM only once to avoid redeclaration errors
 const oM = [{
         id: 0,
         name: "Illustrator",
@@ -24360,7 +24360,7 @@ const oM = [{
     }, {
         id: 3,
         name: "Dimension",
-        description: "the best way to predict the product future is to create it.",
+        description: "The best way to predict the product future is to create it.",
         image: "devangimages/ds.jpg.jpg",
         tags: [],
         twitter: "http://127.0.0.1:5500/software%20di/Untitled-1.html",
@@ -24371,16 +24371,19 @@ const oM = [{
         image: "devangimages/lr.jpg.jpg",
         tags: [],
         twitter: "http://127.0.0.1:5500/software%20light%20room/Untitled-1.html",
-    }],
-    aM = {
-        // html: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">HTML</div>',
-        // css: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">CSS</div>',
-        // javascript: '<div class="work-item-tag" style="background: #FFB800;">JavaScript</div>',
-        // socketio: '<div class="work-item-tag" style="background: #21BAEB;">Socket.IO</div>',
-        // webgl: '<div class="work-item-tag" style="background: #5A69EC;">WebGL</div>',
-        // api: '<div class="work-item-tag" style="background: #CA49F8;">API</div>',
-        // backend: '<div class="work-item-tag" style="background: #8433CC;">Backend</div>'
-    };
+    }];
+
+// aM object for tags, no changes required
+const aM = {
+    // html: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">HTML</div>',
+    // css: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">CSS</div>',
+    // javascript: '<div class="work-item-tag" style="background: #FFB800;">JavaScript</div>',
+    // socketio: '<div class="work-item-tag" style="background: #21BAEB;">Socket.IO</div>',
+    // webgl: '<div class="work-item-tag" style="background: #5A69EC;">WebGL</div>',
+    // api: '<div class="work-item-tag" style="background: #CA49F8;">API</div>',
+    // backend: '<div class="work-item-tag" style="background: #8433CC;">Backend</div>'
+};
+
 class lM {
     constructor() {
         he(this, "domElements", {
